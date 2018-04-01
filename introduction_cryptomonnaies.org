@@ -1,0 +1,659 @@
+#+Title: Introduction au Bitcoin et cryptomonnaies
+#+Author: @Thomas GOOSSENS
+#+Email: tgoossen@gmail.com
+
+#+STARTUP: overview
+#+STARTUP: hidestars
+#+STARTUP: logdone
+#+COLUMNS: %38ITEM(Details) %7TODO(To Do) %TAGS(Context) 
+#+OPTIONS: tags:t 
+#+OPTIONS: timestamp:t p:t
+#+OPTIONS: todo:t
+#+OPTIONS: TeX:t
+#+OPTIONS: LaTeX:t          
+#+OPTIONS: skip:t @:t ::t |:t ^:t f:t
+#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:nil reveal_control:t reveal_global_footer:t reveal_single_file:t
+#+OPTIONS: reveal_rolling_links:t reveal_keyboard:t reveal_overview:t num:nil
+#+OPTIONS: reveal_width:1600 reveal_height:1200
+#+REVEAL_MARGIN: 0.01
+#+REVEAL_MIN_SCALE: 0.1
+#+REVEAL_MAX_SCALE: 2.5
+#+REVEAL_TRANS: none
+#+REVEAL_THEME: black
+#+REVEAL_PLUGINS: (markdown notes)
+#+PROPERTY: results output
+#+PROPERTY: exports both
+#+REVEAL_PLUGINS: (highlight)
+
+
+* Qui suis-je ?
+  :PROPERTIES:
+  :CUSTOM_ID: qui-suis-je
+  :END:
+
+-  Géographe.
+-  Ni économiste ni informaticien
+-  Découvert le BTC en 2013 en étudiant ce qu'est la monnaie
+-  Un brin geek mais surtout curieux
+-  En quête d'alternatives
+
+* Intro à la monnaie
+  :PROPERTIES:
+  :CUSTOM_ID: intro-à-la-monnaie
+  :END:
+
+[[https://www.youtube.com/watch?v=qjnhF8Yw1Io][Monnaie = unité de compte
+des échanges.]]
+
+** Brève histoire
+   :PROPERTIES:
+   :CUSTOM_ID: brève-histoire
+   :END:
+
+troc -> pièces et billets -> blockchain [[./images/moneyEvolution.jpeg]]
+
+** Caractéristiques d'une bonne monnaie ?
+   :PROPERTIES:
+   :CUSTOM_ID: caractéristiques-dune-bonne-monnaie
+   :END:
+
+#+CAPTION: traits of money
+
+[[./images/Traits-of-Money.png]]
+** Confiance en la monnaie
+   :PROPERTIES:
+   :CUSTOM_ID: confiance-en-la-monnaie
+   :END:
+
+#+BEGIN_QUOTE
+  Money is a story that everyone believes in.
+#+END_QUOTE
+
+| Troc        | Pièces, billets, CB        | Bitcoin     |
+|-------------+----------------------------+-------------|
+| commodité   | état + système banquaire   | protocole   |
+
+-  Le troc : pas pratique
+-  système banquaire : sauver ses propre miches au détriment des
+   citoyens.
+-  bitcoin : un protocole informatique infalsifiable
+
+* Le bitcoin (BTC)
+  :PROPERTIES:
+  :CUSTOM_ID: le-bitcoin-btc
+  :END:
+
+** En 2 mots
+   :PROPERTIES:
+   :CUSTOM_ID: en-2-mots
+   :END:
+
+Pas réguler par les états/banques mais par les *algorithmes* > VIRES IN
+NUMERIS
+
+-  monnaie numérique
+-  open-source
+-  décentralisée
+-  publique
+-  Ce n'est pas une app ou une société mais un protocole open-source
+
+** Histoire
+   :PROPERTIES:
+   :CUSTOM_ID: histoire
+   :END:
+
+-  protocole inventé en 2009
+-  par un japonais - Satoshi Nakamoto ? Mystère !
+-  publication
+   ([[https://bitcoin.fr/bitcoin-explique-par-son-inventeur/][white
+   paper]]) 2 mois après la chute de Lehman Brothers
+
+** Quelques chiffres
+   :PROPERTIES:
+   :CUSTOM_ID: quelques-chiffres
+   :END:
+
+Histoire de vous montrer la portée actuelle du BTC et sa fulgurante
+ascension !
+
+*** Market capitalization
+    :PROPERTIES:
+    :CUSTOM_ID: market-capitalization
+    :END:
+
+(apple = 800 B et BNP 103 B) [[./images/market-cap.png]]
+
+*** Market price
+    :PROPERTIES:
+    :CUSTOM_ID: market-price
+    :END:
+
+#+CAPTION: market price
+
+[[./images/market-price.png]]
+*** Trade-volume
+    :PROPERTIES:
+    :CUSTOM_ID: trade-volume
+    :END:
+
+#+CAPTION: trade volume
+
+[[./images/trade-volume.png]]
+*** Nombre de transactions/jours
+    :PROPERTIES:
+    :CUSTOM_ID: nombre-de-transactionsjours
+    :END:
+
+#+CAPTION: daily transactions
+
+[[./images/confirmed-transactions-per-day.png]]
+** Concrètement, comment ça marche ?
+   :PROPERTIES:
+   :CUSTOM_ID: concrètement-comment-ça-marche
+   :END:
+
+*** Technologie blockchain
+    :PROPERTIES:
+    :CUSTOM_ID: technologie-blockchain
+    :END:
+
+#+BEGIN_QUOTE
+  un très grand cahier, que tout le monde peut lire librement et
+  gratuitement, sur lequel tout le monde peut écrire, mais qui est
+  impossible à effacer et indestructible. Jean-Paul Delahaye.
+#+END_QUOTE
+
+-  [[https://www.youtube.com/watch?v=YQduQf1058I?t=1m1s][Le
+   fonctionnement de BTC repose sur la technologie *blockchain*]]
+-  Grand registre public ([[https://blockexplorer.com/][voir
+   blockexplorer]]) infalsifiable de toutes les transactions passées.
+-  La blockchain est consultée pour chaque nouvelle transaction afin
+   d'éviter le problème de la *double dépense* et tentative de créer des
+   faux BTC
+
+*** D'où viennent les BTC ?
+    :PROPERTIES:
+    :CUSTOM_ID: doù-viennent-les-btc
+    :END:
+
+Emis en tant que récompense au MINAGE. [[./images/bitcoinMining.jpg]] -
+/MINAGE/ = fait d'allouer de la puissance de calcul informatique pour
+valider les transactions enregistrée dans le registre distribué. - régle
+d'émission précise fixée dans le code open-source du protocole (><
+inflation)
+
+*** BTC : sous le capot ?
+    :PROPERTIES:
+    :CUSTOM_ID: btc-sous-le-capot
+    :END:
+
+[[https://www.youtube.com/watch?v=r4HQ8Bp-pfw][Clé privée/publique]]
+[[./images/btcTransactionSimple.jpg]]
+
+*** Système distribué
+    :PROPERTIES:
+    :CUSTOM_ID: système-distribué
+    :END:
+
+#+CAPTION: systèmes
+
+[[./images/centralisedVSdistributed.jpeg]]
+
+-  centralized = système banquaire classique garant de la comptabilité =
+   système banquaire
+-  système distribué : éviter le problème de la *Double dépense* :
+   technologie blockchain
+
+*** les acteurs du réseau BTC
+    :PROPERTIES:
+    :CUSTOM_ID: les-acteurs-du-réseau-btc
+    :END:
+
+#+CAPTION: btcActors
+
+[[./images/bitcoinInvolded.jpg]]
+
+-  utilisateurs : vous, moi, et bientôt tout le monde ?
+-  mineurs
+-  marchants : en ligne, le boulanger, opérateurs téléphoniques
+-  places d'échanges (exchanges : kraken, poloniex, Bittrex, etc)
+
+** Le BTC dans la vie de tous les jours
+   :PROPERTIES:
+   :CUSTOM_ID: le-btc-dans-la-vie-de-tous-les-jours
+   :END:
+
+*** Moyen de payement
+    :PROPERTIES:
+    :CUSTOM_ID: moyen-de-payement
+    :END:
+
+#+CAPTION: bitcoinSend
+
+[[./images/bitcoinSend.png]]
+*** Moyen d'épargne
+    :PROPERTIES:
+    :CUSTOM_ID: moyen-dépargne
+    :END:
+
+MAX 21 000 000 de BTC ! [[./images/puchasingPowerDollar.jpg]]
+
+-  [[http://www.investopedia.com/terms/p/purchasingpower.asp][Définiton
+   pouvoir d'achat]]
+-  [[https://www.axabank.be/fr/blog/inflation-reduit-votre-epargne][publication
+   d'AXA]] : l'argent perd sa valeur et les fruits de votre travail sont
+   spoliés !
+
+*** Outil de spéculation
+    :PROPERTIES:
+    :CUSTOM_ID: outil-de-spéculation
+    :END:
+
+Extrême volatilité (whales) [[./images/marketPriceAugust.jpeg]]
+
+*** Moyen d'émancipation
+    :PROPERTIES:
+    :CUSTOM_ID: moyen-démancipation
+    :END:
+
+[[https://www.youtube.com/watch?v=lkNyS6z_uD8&list=PLT87O8mKz3D2DwREQwaARl-T-aomkFeGK&index=5][Vous
+êtes votre propre banque]] ==> transferts sans intermédiaires
+[[./images/bitcoinRemittance.jpg]]
+
+** Considérations politiques et éthiques
+   :PROPERTIES:
+   :CUSTOM_ID: considérations-politiques-et-éthiques
+   :END:
+
+*** Gourmand en énergie (mining)
+    :PROPERTIES:
+    :CUSTOM_ID: gourmand-en-énergie-mining
+    :END:
+
+#+CAPTION: btcMine
+
+[[./images/bitcoinMine.jpg]]
+
+-  [[https://motherboard.vice.com/en_us/article/ypkp3y/bitcoin-is-still-unsustainable][A
+   Single Bitcoin Transaction Takes Thousands of Times More Energy Than
+   a Credit Card Swipe]]
+-  [[https://motherboard.vice.com/en_us/article/ae3p7e/bitcoin-is-unsustainable][Bitcoin
+   is unsustainable]]
+-  [[https://www.coindesk.com/space-time-how-bittorrents-creator-is-attacking-bitcoins-waste-problem/][Solution
+   space as proof]]
+
+*** Anonymat
+    :PROPERTIES:
+    :CUSTOM_ID: anonymat
+    :END:
+
+#+CAPTION: silkRoadBTC
+
+[[./images/silkRoadBTC.png]]
+
+-  certain degré d'anonymat (les adresses des comptes ne sont pas liées
+   à une adresse ou identité réelle,
+   [[https://99bitcoins.com/know-more-top-seven-ways-your-identity-can-be-linked-to-your-bitcoin-address/][quoique]])
+-  activité criminelle : affaire silkroad +
+   [[http://datanews.levif.be/ict/actualite/neuf-perquisitions-a-bruxelles-dans-un-dossier-de-blanchiment-via-des-bitcoins/article-normal-700169.html][blanchiement]]
+
+*** Jamais vaincu mais ... !
+    :PROPERTIES:
+    :CUSTOM_ID: jamais-vaincu-mais-...
+    :END:
+
+-  MtGox scandale - banque de BTC en ligne hackée !
+-  Ban au Venezuela
+-  [[https://www.vice.com/en_us/article/7beymd/this-is-how-bitcoin-could-die][Comment
+   pourrait-il mourir ?]]
+
+** Utiliser des bitcoins
+   :PROPERTIES:
+   :CUSTOM_ID: utiliser-des-bitcoins
+   :END:
+
+*** S'en procurer
+    :PROPERTIES:
+    :CUSTOM_ID: sen-procurer
+    :END:
+
+*** BTC ATM
+    :PROPERTIES:
+    :CUSTOM_ID: btc-atm
+    :END:
+
+#+CAPTION: btcATM
+
+[[./images/btcATM.png]]
+*** Plateformes d'échanges :
+    :PROPERTIES:
+    :CUSTOM_ID: plateformes-déchanges
+    :END:
+
+-  [[https://localbitcoins.com/][localcoins]] -> P2P
+-  [[https://www.coinbase.com/][coinbase]] -> ID
+-  [[https://www.bitstamp.net/][bitstamp]] -> ID
+-  [[https://changelly.co][changelly]] -> + anonyme
+
+*** Travailler online
+    :PROPERTIES:
+    :CUSTOM_ID: travailler-online
+    :END:
+
+[[https://www.upwork.com/o/jobs/browse/skill/bitcoin/][ex: plateformes
+freelancing]]
+
+#+CAPTION: upwork
+
+[[./images/upwork.png]]
+*** Les dépenser
+    :PROPERTIES:
+    :CUSTOM_ID: les-dépenser
+    :END:
+
+*** Wallet/portefeuille
+    :PROPERTIES:
+    :CUSTOM_ID: walletportefeuille
+    :END:
+
+simple app : desktop/smartphone/online [[./images/myceliumBitcoin.jpg]]
+
+-  Cloud (ex: [[https://www.coinbase.com/][coinbase]]) : vous ne
+   possédez pas vraiment vos BTC !
+-  Offline (ex : [[https://wallet.mycelium.com/][mycelium]]) : vous êtes
+   entièrement responsable (backups)
+
+*** Un bout de papier - paper wallet
+    :PROPERTIES:
+    :CUSTOM_ID: un-bout-de-papier---paper-wallet
+    :END:
+
+[[https://www.youtube.com/watch?v=VTsHeiBhPIM][Comment faire]]
+[[./images/paperWallet.png]]
+
+** Anecdotes
+   :PROPERTIES:
+   :CUSTOM_ID: anecdotes
+   :END:
+
+-  [[http://www.lemonde.fr/europe/article/2013/11/30/il-jette-son-disque-dur-il-perd-4-8-millions-d-euros_3523177_3214.html][légende
+   urbaine - vieux disque dur]]
+-  [[http://mashable.com/2017/05/23/bitcoin-pizza-day-20-million/][bitcoin
+   pizza à 10 000 BTC en 2010]]
+
+** Conclusions et perspectives sur le BTC
+   :PROPERTIES:
+   :CUSTOM_ID: conclusions-et-perspectives-sur-le-btc
+   :END:
+
+|              | Voiture            | Bitcoin                  |
+|--------------+--------------------+--------------------------|
+| utiliser     | rouler             | faire des transactions   |
+| sécurité     | ceinture           | passwords manager, etc   |
+| comprendre   | mécanique moteur   | cryptographie            |
+| confiance    | code la route      | blockchain               |
+
+-  monnaie open-source décentralisée ==> consensus entre les
+   utilisateurs
+   ([[https://www.coindesk.com/first-cash-now-gold-another-bitcoin-hard-fork-way/][fork
+   vers BTC Cash et bientôt BTC Gold ?]])
+-  BTC = la panacée ? Non !
+   [[http://magazine.ouishare.net/2013/05/bitcoin-human-based-digital-currency/][Des
+   crypto-monnaies vraiment équitables]]
+-  beaucoup de nouveaux concepts technico-geek
+
+* Les autres cryptomonnaies ou "altcoins"
+  :PROPERTIES:
+  :CUSTOM_ID: les-autres-cryptomonnaies-ou-altcoins
+  :END:
+
+BTC a tokenisé la banque. Pourrait-on tokeniser d'autres secteurs ?
+[[./images/blockchainApps.jpg]]
+
+** Révolution numérique
+   :PROPERTIES:
+   :CUSTOM_ID: révolution-numérique
+   :END:
+
+-  (+) gains de productivité
+-  (+) efficience dans l'utilisation des ressources
+-  (+) de sécurité
+
+*Problème* : (-) Monopolistic companies that take extraordinary fees and
+have full control of the market (Google, Uber, Amazon, AirBnB,
+Deliveroo, etc)
+
+#+CAPTION: GoogleBlockChain
+
+[[./images/googleBlockchain.jpg]]
+** Révolution Blockchain
+   :PROPERTIES:
+   :CUSTOM_ID: révolution-blockchain
+   :END:
+
+-  La blockchain promet d'instaurer de la
+   [[https://blogrecherche.wp.imt.fr/2017/07/13/blockchain-technologie-confiance/][confiance]]
+   entre utilisateurs qui ne se connaissent pas sans devoir disposer
+   d'un intermédiaire.
+-  A
+   "[[http://cirb.brussels/fr/blog/2016/09/blockchain-massacre][Disruptive]]"
+   Technology avec des concepts très techniques (DAO, DAPPS,
+   Smart-contracts, ICO, etc)
+
+#+CAPTION: cartoon
+
+[[./images/cartoonBlockchain.jpeg]]
+** L'émergence des "altcoins"
+   :PROPERTIES:
+   :CUSTOM_ID: lémergence-des-altcoins
+   :END:
+
+-  Des milliers d'applications avec leur propre token! Listées sur
+   [[https://coinmarketcap.com/all/views/all/][coinmarketcap]]
+-  Du "simple" BTC amélioré (ex: [[https://getmonero.org/][monero]] pour
+   l'anonymat) aux
+   [[https://www.coindesk.com/the-dao-just-raised-50-million-but-what-is-it/][DAO]]
+   et [[https://blog.bitnation.co/what-are-dapps/][Dapps]]
+-  Après l'uberisation, la tokenisation !
+
+#+CAPTION: cryptoPoker
+
+[[./images/cryptoPoker.jpg]]
+** Vers une économie distribué
+   :PROPERTIES:
+   :CUSTOM_ID: vers-une-économie-distribué
+   :END:
+
+#+CAPTION: blockchainDisrupt
+
+[[./images/blockchainDisrupt.png]]
+** Dans tous les secteurs
+   :PROPERTIES:
+   :CUSTOM_ID: dans-tous-les-secteurs
+   :END:
+
+-  [[https://medium.com/@dao.casino/why-dao-casino-is-ethereum-for-gambling-7ed2f5cea40c][online
+   gambling]],
+-  [[https://medium.com/daoact/act-blockchain-startup-is-creating-ngo-2-0-330dbff4ccdd][ONG
+   2.0]],
+-  [[https://medium.com/@solar.dao/why-solar-dao-uses-blockchain-d448d0259d8b][fonds
+   d'investissements dans les Energies Renouvelables]],
+-  Recherche Scientifique,
+-  [[https://www.foodcoin.io/][Alimentation Durable]],
+-  [[https://medium.com/@ConsenSys/why-how-decentralized-prediction-markets-will-change-just-about-everything-15ff02c98f7c][Predictions
+   markets]],
+-  etc...
+
+** Quelques cas concrets
+   :PROPERTIES:
+   :CUSTOM_ID: quelques-cas-concrets
+   :END:
+
+*** Slockit
+    :PROPERTIES:
+    :CUSTOM_ID: slockit
+    :END:
+
+-  clefs automatiques
+-  https://slock.it/
+-  article sur leur
+   [[https://blog.slock.it/slock-it-decentralizing-the-emerging-sharing-economy-cf19ce09b957][blog]]
+
+*** Storj.io
+    :PROPERTIES:
+    :CUSTOM_ID: storj.io
+    :END:
+
+-  tokenization de dropbox/google drive
+-  https://storj.io/
+-  article sur
+   [[https://medium.com/@DJohnstonEC/informational-report-on-storj-io-1a03c5c65266][medium]]
+
+*** Steemit
+    :PROPERTIES:
+    :CUSTOM_ID: steemit
+    :END:
+
+-  tokenization de twitter/facebook
+-  https://steemit.com
+-  article sur
+   [[https://www.coindesk.com/steemit-blockchain-social-media-how-works/][coindesk]]
+
+*** La'Zooz
+    :PROPERTIES:
+    :CUSTOM_ID: lazooz
+    :END:
+
+-  tokenization d'Uber
+-  http://lazooz.org/
+-  article sur
+   [[https://www.shareable.net/blog/lazooz-the-decentralized-crypto-alternative-to-uber][shareable]]
+
+*** Silent Notary
+    :PROPERTIES:
+    :CUSTOM_ID: silent-notary
+    :END:
+
+-  tokenization des notaires
+-  https://silentnotary.com/
+
+** Encore d'autres exemples ?
+   :PROPERTIES:
+   :CUSTOM_ID: encore-dautres-exemples
+   :END:
+
+[[https://www.youtube.com/watch?v=G3psxs3gyf8][video 19 industries The
+blockchain will disrupt]]
+
+** Blockchain = Nouvelle révolution économique
+   :PROPERTIES:
+   :CUSTOM_ID: blockchain-nouvelle-révolution-économique
+   :END:
+
+#+CAPTION: blockchainRevolution
+
+[[./images/blockchainRevolution.png]]
+
+-  [[https://techcrunch.com/2016/05/11/the-blockchain-is-the-new-google/][Blockchain
+   = the new google]]
+-  On en est au tout début ! Technologie en développement très rapide
+
+** Proposition de définition d'un
+altcoin/[[https://icomentor.net/2017/08/06/comprendre-les-tokens-definition-explication/][token]]
+   :PROPERTIES:
+   :CUSTOM_ID: proposition-de-définition-dun-altcointoken
+   :END:
+
+-  Cryptomonnaie reposant sur des protocoles similaires à BTC mais avec
+   leurs propres spécificités répondants à des besoins bien précis
+-  Token *protocol* (ex: ETH) vs. token *app* (ex: STORJ)
+-  usages des tokens =
+-  droit d'usage d'un service
+-  droit de vote
+-  moyen de payement
+-  réputation
+-  unité de valeur d'échange au sein d'une app
+-  moyen de financement participatif (ICO - initial coin offering)
+-  mis en circulation suivant des règles pensées pour un fonctionnement
+   optimal du protocole/ de l'app qu'ils supportent
+-  altcoin très populaire : l'Ethereum (ETH) (type protocol)
+
+** Quelques mots sur l'ETH
+   :PROPERTIES:
+   :CUSTOM_ID: quelques-mots-sur-leth
+   :END:
+
+#+BEGIN_QUOTE
+  Ethereum is an open-source, public, blockchain-based distributed
+  computing platform featuring *smart contract* (scripting)
+  functionality. It provides a decentralized Turing-complete virtual
+  machine, the Ethereum Virtual Machine (EVM), which can execute scripts
+  using an international network of public nodes.
+#+END_QUOTE
+
+#+CAPTION: ethereumLogo
+
+[[./images/ethereumLogo.png]]
+
+-  super-ordinateur mondial décentralisé et programmable dans lequel
+   résident des [[https://blog.bitnation.co/what-are-dapps][Dapps]]
+-  [[https://www.coindesk.com/information/what-is-ethereum/][autre
+   explication]]
+-  90% des altcoins type token app sont créés via la blockchain ETH
+
+** le mécanisme des
+[[https://blockchainfrance.net/2017/08/22/comprendre-ico-initial-coin-offering/][ICO]]
+   :PROPERTIES:
+   :CUSTOM_ID: le-mécanisme-des-ico
+   :END:
+
+#+CAPTION: icoResults
+
+[[./images/icoResults.jpg]]
+
+-  mécanisme de levée de fonds pour future dapps
+-  émission de tokens pré-commandables contre BTC/ETH/€/$
+-  moyen d'investissement
+-  ex :
+   [[https://www.coindesk.com/200-million-60-minutes-filecoin-ico-rockets-record-amid-tech-issues/][projet
+   Filecoin : 200 Mions $ en 1h !!]]
+-  non régulées (beaucoup d'arnaques !)
+
+* Investir dans les cryptomonnaies ?
+  :PROPERTIES:
+  :CUSTOM_ID: investir-dans-les-cryptomonnaies
+  :END:
+
+s'informer et comprendre : lire, écrire, poser des questions
+[[./images/investirCrypto.png]]
+
+-  Difficile de prédire lesquels arriveront véritablement à s'imposer, à
+   être adoptées
+-  nouveaux business modèles
+-  phase expérimentale
+-  rès haut potentiel de ROI (bulle spéculative en cours ?)
+-  Acheter crypto existante ou investir dans ICO (calendrier sur
+   [[https://tokenmarket.net/ico-calendar][tokenmarket]])
+
+[[https://steemit.com/cryptomonnaie/@gillian-delvigne/comment-bien-se-lancer-dans-les-cryptomonnaies-le-guide-du-debutant][guide
+du débutant]]
+
+* Références pour débutants
+  :PROPERTIES:
+  :CUSTOM_ID: références-pour-débutants
+  :END:
+
+https://www.coindesk.com/information/
+
+* Sites à suivre pour s'informer
+  :PROPERTIES:
+  :CUSTOM_ID: sites-à-suivre-pour-sinformer
+  :END:
+
+-  [[https://coinmarketcap.com/currencies/bitcoin/][coinmarketcap.com]]
+-  [[https://blockchain.info/charts][blockchain.info]]
+-  [[https://bitcoin.fr/bitcoin-explique-par-son-inventeur/][bitcoin.fr]]
+-  [[https://journalducoin.com][lejournalducoin.com]]
+-  [[https://www.coindesk.com/][coindesk.com]]
+-  [[https://cointelegraph.com][cointelegraph.com]]
+-  [[https://cryptopotato.com/][cryptopotato.com]]
